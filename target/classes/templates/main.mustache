@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Main page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <input type="text" name="login" placeholder="Введите логин">
+            <input type="text" name="password" placeholder="Введите пароль">
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+    <div>Список сообщений</div>
+    <form method="post" action="filter">
+        <input type="text" name="filter">
+        <button type="submit">Найти</button>
+    </form>
+<!--    Непустой список-->
+    {{#users}}
+        <div>
+            <b>{{id}}</b>
+            <span>{{login}}</span>
+            <i>{{password}}</i>
+        </div>
+    {{/users}}
+</body>
+</html>
