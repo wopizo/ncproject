@@ -1,12 +1,8 @@
 package test.repos;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import test.domain.User;
 
-import java.util.List;
-
-public interface UserRepo extends CrudRepository<User, Integer> {
-
-    List<User> findByLogin(String login);
-
+public interface UserRepo extends JpaRepository<User, Long> {
+    User findByUsername(String username);
 }
